@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Flutter plugin
+}
+
+android {
+    namespace = "com.example.dummyproject" // Ensure namespace is added
+    compileSdkVersion 34  // Updated to SDK 35 to fix the plugin warning
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Updated Java version
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // Ensure compatibility with Java 17
+    }
+
+    defaultConfig {
+        applicationId = "com.example.dummyproject"
+        minSdk = 21 // Minimum supported version (unchanged)
+        targetSdk = 34 // Updated to align with compileSdk (recommended)
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug // Keep debug signing for now
+            minifyEnabled false // Avoids obfuscating the code
+            shrinkResources false // Avoids removing resources
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}

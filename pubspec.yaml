@@ -100,10 +100,7 @@ flutter:
     # - assets\nonFiction\The Meditations of Marcus Aurelius (Marcus Aurelius) (Z-Library).pdf
     # - assets\nonFiction\Walden 150th Anniversary Edition (Henry David Thoreau, J. Lyndon Shanley (Editor)) (Z-Library).pdf
     - assets/philosophy/
-    #  Beyond Good and Evil - Friedrich Nietzsche - PDF Room.pdf
-    # - assets\philosophy\Charles Darwin and The Origin of Species - PDF Room.pdf
-    # - assets\philosophy\The Science of Getting Rich - Still Light Centre - PDF Room.pdf
-    # - assets\philosophy\Thus Spake Zarathustra - Friedrich Nietzsche - PDF Room.pdf
+
     - assets\icon\Book world.png
     - assets\icon\Adobe Express - file.png
     - assets\icon\1.png
@@ -142,6 +139,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_icons:
-  android: true
+  android: "adaptive"
   ios: true
-  image_path: "assets/icon/Book world.png"
+  image_path_android: "assets/icon/1.png"
+  image_path_ios: "assets/icon/1.png"
+  adaptive_icon_foreground: "assets/icon/foreground.png"
+  adaptive_icon_background: "#FFFFFF"
